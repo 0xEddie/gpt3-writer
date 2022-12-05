@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "";
+const basePromptPrefix = "test";
 const generateAction = async (req, res) => {
     // run first prompt
     console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
@@ -19,7 +19,7 @@ const generateAction = async (req, res) => {
     });
     
     const basePromptOutput = baseCompletion.data.choices.pop();
-    
+    console.log(basePromptOutput)
     res.status(200).json({ output: basePromptOutput });
 };
 

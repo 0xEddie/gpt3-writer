@@ -23,8 +23,9 @@ const Home = () => {
       },
       body: JSON.stringify({ userInput }),
     });
-    
+    console.log(response);
     const data = await response.json();
+    console.log(data);
     const { output } = data;
     console.log("OpenAI replied...", output.text);
   
