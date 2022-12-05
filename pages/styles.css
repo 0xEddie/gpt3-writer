@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+@font-face {
+    font-family: 'Keep on Truckin';
+    src: url('../assets/fonts/KEEPT___.TTF');
+}
 
 body {
     margin: 0;
@@ -49,6 +53,7 @@ body {
 }
 
 .header-title h1 {
+    font-family: 'Keep on Truckin';
     width: 100%;
     font-weight: 700;
     font-size: 72px;
@@ -297,7 +302,7 @@ textarea {
 }
 
 .output-header h3 {
-    font-family: "Manrope", serif;
+    font-family: "Keep on Truckin", serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 800;
@@ -324,6 +329,34 @@ textarea {
     text-align: center;
     white-space: pre-line;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.funked {
+    /* fallback color */
+    background-color: #FFF;
+
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    /* make text a transparent mask for bg gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {

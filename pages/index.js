@@ -39,7 +39,7 @@ const Home = () => {
       <div className="container">
 
         <div className="header">
-          <div className="header-title">
+          <div className="header-title funked">
             <h1>Ask Alan Watts anything!</h1>
           </div>
           <div className="header-subtitle">
@@ -69,7 +69,7 @@ const Home = () => {
           {apiOutput && (
             <div className='output'>
               <div className='output-header-container'>
-                <div className='output-header'>
+                <div className='output-header funked'>
                   <h3>Alan says:</h3>
                 </div>
               </div>
