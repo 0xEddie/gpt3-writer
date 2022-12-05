@@ -1,13 +1,13 @@
 import { Configuration, OpenAIApi } from "openai";
-
+console.log(process.env.OPENAI_API_KEY)
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "test";
 const generateAction = async (req, res) => {
+    const basePromptPrefix = "tesT==============";
     // run first prompt
     console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
     
@@ -19,7 +19,6 @@ const generateAction = async (req, res) => {
     });
     
     const basePromptOutput = baseCompletion.data.choices.pop();
-    console.log(basePromptOutput)
     res.status(200).json({ output: basePromptOutput });
 };
 
