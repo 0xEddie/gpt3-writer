@@ -35,7 +35,9 @@ const Home = () => {
       <Head>
         <title>Alan Watts Bot</title>
       </Head>
+
       <div className="container">
+
         <div className="header">
           <div className="header-title">
             <h1>Ask Alan Watts anything!</h1>
@@ -44,22 +46,40 @@ const Home = () => {
             <h2>Alan Watts bot knows a lot about Buddhism and Eastern philosophy. Do you have any questions for him?</h2>
           </div>
         </div>
+        
         <div className='prompt-container'>
           <textarea
             className='prompt-box' 
-            placeholder='type your prompt here' 
+            placeholder='Ask Alan Watts bot for advice!' 
             value={userInput}
             onChange={onUserChangedText}
           />;
-        <div className='prompt-buttons'>
-          <a className='generate-button' onClick={callGenerateEndpoint}>
-            <div className='generate'>
-              <p>Generate</p>
+
+          <div className='prompt-buttons'>
+            <a className='generate-button' onClick={callGenerateEndpoint}>
+              <div className='generate'>
+                <p>Generate</p>
+              </div>
+            </a>
+          </div>
+
+          {apiOutput && (
+            <div className='output'>
+              <div className='output-header-container'>
+                <div className='output-header'>
+                  <h3>Output</h3>
+                </div>
+              </div>
+              <div className='output-content'>
+                <p>{apiOutput}</p>
+              </div>
             </div>
-          </a>
+          )}
+
         </div>
-        </div>
+      
       </div>
+
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
@@ -72,6 +92,7 @@ const Home = () => {
           </div>
         </a>
       </div>
+
     </div>
   );
 };
