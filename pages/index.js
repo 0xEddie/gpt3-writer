@@ -24,10 +24,13 @@ const Home = () => {
       body: JSON.stringify({ userInput }),
     });
     const data = await response.json();
+    console.log("data:", data);
     const { output } = data;
-    console.log("OpenAI replied...", output.text);
+    console.log("output:", output)
+    console.log("output.text:", output.text)
+    console.log("OpenAI replied...", output);
   
-    setApiOutput(`${output.text}`);
+    setApiOutput(output.text);
     setIsGenerating(false);
   };
   return (
@@ -65,8 +68,8 @@ const Home = () => {
               </div>
             </a>
           </div>
-
-          {apiOutput && (
+          
+          { apiOutput && (
             <div className='output'>
               <div className='output-header-container'>
                 <div className='output-header funked'>
