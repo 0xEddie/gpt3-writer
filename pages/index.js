@@ -51,7 +51,7 @@ const Home = () => {
         </div>
         
         <div className='prompt-container'>
-          <textarea
+          <textarea rows={1}
             className='prompt-box' 
             placeholder='Ask Alan Watts bot for advice!' 
             value={userInput}
